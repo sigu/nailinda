@@ -1,35 +1,20 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>A productive web framework that<br/>does not compromise speed and maintainability.</p>
-</section>
-
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.4/CHANGELOG.md">v1.4 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-    </ul>
-  </article>
-</section>
+<div id="page-index">
+  <section class="hero is-fullheight-with-navbar intro">
+    <div class="hero-body has-text-white">
+      <div class="container ">
+        <h1 class="title has-text-white is-size-1">
+          Karibu Nailinda
+        </h1>
+        <h2 class="subtitle has-text-white">A location-based health information system</h2>
+        <div class="content">
+          <p> We have a vision to solve the following problems, among many others </p>
+          <ol>
+            <li> Analysing disease trends according to the geographical location. </li>
+            <li> Helping solve challenges faced by pregnant women who are unable to get medical services. </li>
+            <li> Helping users in need medical services to trace nearby health amenities in relation to their location. </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

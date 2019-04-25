@@ -1,0 +1,8 @@
+<h1>Create Doctor</h1>
+<%= render "form.html", Map.put(assigns, :action,Routes.doctor_path(@conn, :create)) %>
+
+
+
+  		
+  		
+  		

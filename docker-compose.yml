@@ -1,0 +1,47 @@
+version: '3.2'
+services:
+  db:
+    environment:
+        - TERM=xterm-256color
+    tty: true
+    image: postgres
+    ports:
+      - "2345:2345"
+
+  redis:
+    image: redis:5.0.3-alpine
+    hostname: redis
+    environment:
+      - REDIS_HOST=redis
+      - ALLOW_EMPTY_PASSWORD=yes
+    command:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - "6379:6379"
+
+  redis-cli:
+    image: redis:5.0.3-alpine
+    links:
+      - redis
+    command: redis-cli -h redis
+
+  web:
+    environment:
+        REDIS_URI: redis://redis:6379
+    tty: true
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+      - redis
+      - redis-cli
+    command:
+      - ./run.sh

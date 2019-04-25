@@ -1,0 +1,41 @@
+<section class="hero is-fullheight-with-navbar">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <h1 class="title"> Log in </h1>
+          <%= form_for @conn, Routes.session_path(@conn, :create), [as: :session], fn f -> %>
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <%= label f, :email, class: "label" %>
+                  <div class="control">
+                    <%= text_input f, :email, class: "input"  %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= label f, :password, class: "label" %>
+              <%= password_input f, :password, class: "input" %>
+            </div>
+
+            <div class="field">
+              <%= checkbox f, :remember_me , class: "checkbox" %>
+              <%= label f, :remember_me, class: "checkbox" %>
+            </div>
+
+            <div class="field">
+              <%= submit "Login", class: "button is-primary is-fullwidth" %>
+            </div>
+            <div class="field">
+              <%= link "Back", to: Routes.page_path(@conn, :index), class: "button is-fullwidth" %>
+            </div>
+        </div>
+      </div>
+          <% end %>
+
+    </div>
+  </div>
+</section>

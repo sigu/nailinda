@@ -68,7 +68,7 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :nailinda, Nailinda.Repo,
-  username: "linda",
+  username: "postgres",
   password: "postgres",
   database: "nailinda_dev",
   hostname: "localhost",
